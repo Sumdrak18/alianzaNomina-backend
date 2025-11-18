@@ -1,0 +1,28 @@
+@extends('layouts.app')
+
+@section('content')
+<h2>Crear Cargo</h2>
+
+{{-- MENSAJES DE ERROR --}}
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+<form action="{{ route('cargos.store') }}" method="POST">
+    @csrf
+
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre del cargo *</label>
+        <input type="text" name="nombre" class="form-control" required>
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+    <a href="{{ route('cargos.index') }}" class="btn btn-secondary">Cancelar</a>
+</form>
+@endsection
