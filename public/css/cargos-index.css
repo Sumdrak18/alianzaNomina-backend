@@ -1,0 +1,38 @@
+/* public/css/cargos-index.css – Estilo específico para Cargos (hereda del principal) */
+
+/* Fondo degradado bonito para toda la página de cargos */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Contenedor con efecto glassmorphism */
+.empleados-list {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjetas/filas con efecto cristal */
+.empleado-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.empleado-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(102, 106, 234, 0.3);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* Avatar de cargo con colores diferentes */
+.cargo-item .empleado-avatar {
+    background: linear-gradient(135deg, #ff9ff3, #feca57);
+    box-shadow: 0 8px 20px rgba(255, 159, 243, 0.4);
+}
